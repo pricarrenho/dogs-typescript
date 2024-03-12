@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { ReactComponent as Dogs } from "../../Assets/dogs.svg";
-import { UserContext } from "../../UserContext";
+import { UserContext } from "../../context/UserContext";
 
 export const Header = () => {
   const { data } = useContext(UserContext);

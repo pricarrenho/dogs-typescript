@@ -1,11 +1,11 @@
 import { Route, Routes as RouteLib } from "react-router-dom";
-import { Home } from "../Components/Home";
-import { Login } from "../Components/Login/Login";
+import { Home } from "../pages/Home";
+import { Login } from "../pages/Login/Login";
 import { ProtectedRoute } from "../Components/Helper/ProtectedRoute";
-import { User } from "../Components/User/User";
-import { Photo } from "../Components/Photo/Photo";
-import { UserProfile } from "../Components/User/UserProfile";
-import { NotFound } from "../Components/NotFound";
+import { User } from "../pages/User/User";
+import { Photo } from "../pages/Photo/Photo";
+import { UserProfile } from "../pages/User/UserProfile";
+import { NotFound } from "../pages/NotFound";
 
 export const Routes = () => {
   return (
