@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Input } from "../../../Components/Forms/Input";
 import { Button } from "../../../Components/Forms/Button";
@@ -24,7 +25,7 @@ export const LoginPasswordReset = () => {
     if (login) setLogin(login);
   }, []);
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (password.validate()) {
@@ -34,7 +35,7 @@ export const LoginPasswordReset = () => {
         password: password.value,
       });
       const { response } = await request(url, options);
-      if (response.ok) navigate("/login");
+      if (response?.ok) navigate("/login");
     }
   }
 

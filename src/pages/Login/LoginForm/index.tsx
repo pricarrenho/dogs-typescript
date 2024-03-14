@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import { useForm } from "../../../Hooks/useForm";
 import { UserContext } from "../../../context/UserContext";
@@ -6,8 +7,8 @@ import { Input } from "../../../Components/Forms/Input";
 import { Button } from "../../../Components/Forms/Button";
 import { Error } from "../../../Components/Helper/Error";
 import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
 import stylesBTN from "../../../Components/Forms/Button/styles.module.css";
+import styles from "./styles.module.css";
 
 export const LoginForm = () => {
   const username = useForm();
@@ -15,7 +16,7 @@ export const LoginForm = () => {
 
   const { userLogin, error, loading } = useContext(UserContext);
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (username.validate() && password.validate()) {

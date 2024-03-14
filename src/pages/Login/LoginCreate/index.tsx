@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import { useForm } from "../../../Hooks/useForm";
 import { UserContext } from "../../../context/UserContext";
@@ -16,7 +17,7 @@ export const LoginCreate = () => {
   const { userLogin } = useContext(UserContext);
   const { loading, error, request } = useFetch();
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const { url, options } = USER_POST({
       username: username.value,
@@ -25,7 +26,7 @@ export const LoginCreate = () => {
     });
 
     const { response } = await request(url, options);
-    if (response.ok) userLogin(username.value, password.value);
+    if (response?.ok) userLogin(username.value, password.value);
   }
 
   return (

@@ -1,3 +1,4 @@
+import React from "react";
 import { Input } from "../../../Components/Forms/Input";
 import { Button } from "../../../Components/Forms/Button";
 import { useForm } from "../../../Hooks/useForm";
@@ -10,7 +11,7 @@ export const LoginPasswordLost = () => {
   const login = useForm();
   const { data, loading, error, request } = useFetch();
 
-  async function HandleSubmit(event) {
+  async function HandleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (login.validate()) {
