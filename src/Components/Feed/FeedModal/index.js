@@ -10,6 +10,8 @@ import { PHOTO_GET } from "../../../services/api";
 export const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();
 
+  console.log(data);
+
   useEffect(() => {
     const { url, options } = PHOTO_GET(photo.id);
     request(url, options);

@@ -1,11 +1,12 @@
 import { useCallback, useState } from "react";
+import { DataProps } from "../pages/Photo/types";
 
 export const useFetch = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<DataProps>();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const request = useCallback(async (url, options) => {
+  const request = useCallback(async (url: string, options: any) => {
     let response;
     let json;
     try {

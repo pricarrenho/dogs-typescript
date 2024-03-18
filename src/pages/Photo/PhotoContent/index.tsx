@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../context/UserContext";
@@ -5,8 +6,9 @@ import { Image } from "../../../Components/Helper/Image";
 import { PhotoComments } from "../PhotoComments";
 import { PhotoDelete } from "../PhotoDelete";
 import styles from "./styles.module.css";
+import { PhotoContentProps } from "../types";
 
-export const PhotoContent = ({ data, single }) => {
+export const PhotoContent = ({ data, single }: PhotoContentProps) => {
   const user = useContext(UserContext);
   const { photo, comments } = data;
 
@@ -31,11 +33,13 @@ export const PhotoContent = ({ data, single }) => {
           <ul className={styles.attributes}>
             <li>{photo.peso} kg</li>
             <li>
-              {photo.idade <= 1 ? photo.idade + " ano" : photo.idade + " anos"}
+              {Number(photo.idade) <= 1
+                ? photo.idade + " ano"
+                : photo.idade + " anos"}
             </li>
           </ul>
         </div>
-        <PhotoComments single={single} id={photo.id} comments={comments} />
+        <PhotoComments single={single} id={photo.id} commentArray={comments} />
       </div>
     </div>
   );

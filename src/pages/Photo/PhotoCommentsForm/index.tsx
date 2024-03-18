@@ -1,24 +1,30 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ReactComponent as Enviar } from "../../../Assets/enviar.svg";
 import { useFetch } from "../../../Hooks/useFetch";
 import { Error } from "../../../Components/Helper/Error";
-import styles from "./styles.module.css";
 import { COMMENT_POST } from "../../../services/api";
+import { PhotoCommentsFormProps } from "../types";
+import styles from "./styles.module.css";
 
-export const PhotoCommentsForm = ({ id, setComments, single }) => {
+export const PhotoCommentsForm = ({
+  id,
+  setComments,
+  single,
+}: PhotoCommentsFormProps) => {
   const [comment, setComment] = useState("");
 
   const { request, error } = useFetch();
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const token = window.localStorage.getItem("token");
     const { url, options } = COMMENT_POST(id, { comment }, token);
     const { response, json } = await request(url, options);
-    if (response.ok) {
+
+    if (response?.ok) {
       setComment("");
-      setComments((comments) => [...comments, json]);
+      setComments((comments: any) => [...comments, json]);
     }
   }
 
