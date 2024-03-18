@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import { Input } from "../../../Components/Forms/Input";
-import { Button } from "../../../Components/Forms/Button";
+import { Input } from "../../../Components/Input";
+import { Button } from "../../../Components/Button";
 import { useForm } from "../../../Hooks/useForm";
 import { useFetch } from "../../../Hooks/useFetch";
 import { Error } from "../../../Components/Helper/Error";

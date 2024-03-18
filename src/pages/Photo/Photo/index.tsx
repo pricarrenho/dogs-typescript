@@ -11,8 +11,6 @@ export const Photo = () => {
   const { id } = useParams();
   const { data, error, loading, request } = useFetch();
 
-  console.log(data);
-
   useEffect(() => {
     const { url, options } = PHOTO_GET(id);
     request(url, options);

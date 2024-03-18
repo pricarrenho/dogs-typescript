@@ -1,16 +1,13 @@
-import { useEffect } from "react";
-import styles from "./styles.module.css";
+import React, { useEffect } from "react";
 import { useFetch } from "../../../Hooks/useFetch";
-
 import { Error } from "../../Helper/Error";
 import { Loading } from "../../Helper/Loading";
 import { PhotoContent } from "../../../pages/Photo/PhotoContent";
 import { PHOTO_GET } from "../../../services/api";
+import styles from "./styles.module.css";
 
 export const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();
-
-  console.log(data);
 
   useEffect(() => {
     const { url, options } = PHOTO_GET(photo.id);

@@ -1,3 +1,5 @@
+import React from "react";
+import { InputProps } from "./types";
 import styles from "./styles.module.css";
 
 export const Input = ({
@@ -8,7 +10,7 @@ export const Input = ({
   onChange,
   error,
   onBlur,
-}) => {
+}: InputProps) => {
   return (
     <div className={styles.wrapper}>
       <label className={styles.label} htmlFor={name}>

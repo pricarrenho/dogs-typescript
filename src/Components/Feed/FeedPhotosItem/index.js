@@ -1,5 +1,5 @@
-import styles from "./styles.module.css";
 import { Image } from "../../Helper/Image";
+import styles from "./styles.module.css";
 
 export const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   function handleCLick() {

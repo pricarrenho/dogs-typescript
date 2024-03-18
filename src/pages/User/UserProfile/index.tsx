@@ -1,6 +1,6 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import { Head } from "../../../Components/Helper/Head";
-
 import { Feed } from "../../../Components/Feed/Feed";
 
 export const UserProfile = () => {

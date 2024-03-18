@@ -1,3 +1,4 @@
+import React from "react";
 import { lazy, Suspense, useEffect } from "react";
 import { Head } from "../../../Components/Helper/Head";
 import { useFetch } from "../../../Hooks/useFetch";

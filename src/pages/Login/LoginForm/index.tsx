@@ -3,11 +3,11 @@ import { useContext } from "react";
 import { useForm } from "../../../Hooks/useForm";
 import { UserContext } from "../../../context/UserContext";
 import { Head } from "../../../Components/Helper/Head";
-import { Input } from "../../../Components/Forms/Input";
-import { Button } from "../../../Components/Forms/Button";
+import { Input } from "../../../Components/Input";
+import { Button } from "../../../Components/Button";
 import { Error } from "../../../Components/Helper/Error";
 import { Link } from "react-router-dom";
-import stylesBTN from "../../../Components/Forms/Button/styles.module.css";
+import stylesBTN from "../../../Components/Button/styles.module.css";
 import styles from "./styles.module.css";
 
 export const LoginForm = () => {

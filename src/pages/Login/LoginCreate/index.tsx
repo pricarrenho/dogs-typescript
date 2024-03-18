@@ -5,8 +5,8 @@ import { UserContext } from "../../../context/UserContext";
 import { useFetch } from "../../../Hooks/useFetch";
 import { USER_POST } from "../../../services/api";
 import { Head } from "../../../Components/Helper/Head";
-import { Input } from "../../../Components/Forms/Input";
-import { Button } from "../../../Components/Forms/Button";
+import { Input } from "../../../Components/Input";
+import { Button } from "../../../Components/Button";
 import { Error } from "../../../Components/Helper/Error";
 
 export const LoginCreate = () => {

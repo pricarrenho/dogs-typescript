@@ -1,6 +1,6 @@
 import React from "react";
-import { Input } from "../../../Components/Forms/Input";
-import { Button } from "../../../Components/Forms/Button";
+import { Input } from "../../../Components/Input";
+import { Button } from "../../../Components/Button";
 import { useForm } from "../../../Hooks/useForm";
 import { Error } from "../../../Components/Helper/Error";
 import { Head } from "../../../Components/Helper/Head";

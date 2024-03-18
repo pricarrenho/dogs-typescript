@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FeedModal } from "../FeedModal";
 import { FeedPhotos } from "../FeedPhotos";
 import PropTypes from "prop-types";
+import { FeedProps } from "../types";
 
-export const Feed = ({ user }) => {
+export const Feed = ({ user }: FeedProps) => {
   const [modalPhoto, setModalPhoto] = useState(null);
   const [pages, setPages] = useState([1]);
   const [infinite, setInfinite] = useState(true);

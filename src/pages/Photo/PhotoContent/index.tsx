@@ -5,8 +5,8 @@ import { UserContext } from "../../../context/UserContext";
 import { Image } from "../../../Components/Helper/Image";
 import { PhotoComments } from "../PhotoComments";
 import { PhotoDelete } from "../PhotoDelete";
-import styles from "./styles.module.css";
 import { PhotoContentProps } from "../types";
+import styles from "./styles.module.css";
 
 export const PhotoContent = ({ data, single }: PhotoContentProps) => {
   const user = useContext(UserContext);
