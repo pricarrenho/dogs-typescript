@@ -4,15 +4,15 @@ import { useForm } from "../../../Hooks/useForm";
 import { UserContext } from "../../../context/UserContext";
 import { useFetch } from "../../../Hooks/useFetch";
 import { USER_POST } from "../../../services/api";
-import { Head } from "../../../Components/Helper/Head";
+import { Head } from "../../../Components/Head/Head";
 import { Input } from "../../../Components/Input";
 import { Button } from "../../../Components/Button";
-import { Error } from "../../../Components/Helper/Error";
+import { Error } from "../../../Components/Error";
 
 export const LoginCreate = () => {
-  const username = useForm();
+  const username = useForm(false);
   const email = useForm("email");
-  const password = useForm();
+  const password = useForm(false);
 
   const { userLogin } = useContext(UserContext);
   const { loading, error, request } = useFetch();
@@ -31,7 +31,7 @@ export const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
-      <Head title="Crie sua Conta" />
+      <Head title="Crie sua Conta" description="Crie sua conta aqui" />
 
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>

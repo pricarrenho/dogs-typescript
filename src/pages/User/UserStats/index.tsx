@@ -1,9 +1,9 @@
 import React from "react";
 import { lazy, Suspense, useEffect } from "react";
-import { Head } from "../../../Components/Helper/Head";
+import { Head } from "../../../Components/Head/Head";
 import { useFetch } from "../../../Hooks/useFetch";
-import { Error } from "../../../Components/Helper/Error";
-import { Loading } from "../../../Components/Helper/Loading";
+import { Error } from "../../../Components/Error";
+import { Loading } from "../../../Components/Loading/Loading";
 import { STATS_GET } from "../../../services/api";
 
 const UserStatsGraphs = lazy(() => import("../UserStatsGraphs"));
@@ -26,7 +26,10 @@ export const UserStats = () => {
   if (data)
     return (
       <Suspense fallback={<div></div>}>
-        <Head title="Estatísticas" />
+        <Head
+          title="Estatísticas"
+          description="Veja as estatísticas da sua conta aqui"
+        />
         <UserStatsGraphs data={data} />
       </Suspense>
     );

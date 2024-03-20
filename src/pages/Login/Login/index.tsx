@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext";
-import { Loading } from "../../../Components/Helper/Loading";
+import { Loading } from "../../../Components/Loading/Loading";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { LoginForm } from "../LoginForm";
 import { LoginCreate } from "../LoginCreate";

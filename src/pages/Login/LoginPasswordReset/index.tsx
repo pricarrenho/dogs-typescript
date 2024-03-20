@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { Input } from "../../../Components/Input";
 import { Button } from "../../../Components/Button";
 import { useForm } from "../../../Hooks/useForm";
-import { Error } from "../../../Components/Helper/Error";
-import { Head } from "../../../Components/Helper/Head";
+import { Error } from "../../../Components/Error";
+import { Head } from "../../../Components/Head/Head";
 import { useFetch } from "../../../Hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { PASSWORD_RESET } from "../../../services/api";
@@ -12,7 +12,7 @@ import { PASSWORD_RESET } from "../../../services/api";
 export const LoginPasswordReset = () => {
   const [login, setLogin] = useState("");
   const [key, setKey] = useState("");
-  const password = useForm();
+  const password = useForm(false);
   const { error, loading, request } = useFetch();
   const navigate = useNavigate();
 
@@ -41,7 +41,7 @@ export const LoginPasswordReset = () => {
 
   return (
     <section className="animeLeft">
-      <Head title="Resete a senha" />
+      <Head title="Resete a senha" description="Resete sua senha aqui" />
 
       <h1 className="title">Resete a Senha</h1>
       <form onSubmit={handleSubmit}>

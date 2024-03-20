@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../../Hooks/useFetch";
-import { Error } from "../../../Components/Helper/Error";
-import { Loading } from "../../../Components/Helper/Loading";
+import { Error } from "../../../Components/Error";
+import { Loading } from "../../../Components/Loading/Loading";
 import { PhotoContent } from "../PhotoContent";
 import { PHOTO_GET } from "../../../services/api";
 

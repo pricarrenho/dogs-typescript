@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { VictoryPie, VictoryChart, VictoryBar } from "victory";
+import { GraphType, UserStatsGraphsProps } from "./types";
 import styles from "./styles.module.css";
 
-const UserStatsGraphs = ({ data }) => {
-  const [graph, setGraph] = useState([]);
+const UserStatsGraphs = ({ data }: UserStatsGraphsProps) => {
+  const [graph, setGraph] = useState<GraphType[]>([]);
   const [total, setTotal] = useState(0);
+
+  console.log(graph);
 
   useEffect(() => {
     const graphData = data.map((item) => {

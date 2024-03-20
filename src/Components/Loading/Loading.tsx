@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import styles from "./Loading.module.css";
 
@@ -15,7 +16,7 @@ export const Loading = () => {
     return () => clearInterval(interval);
   }, []);
 
-  function displayStep(stepIndex) {
+  function displayStep(stepIndex: number) {
     return {
       display: step === stepIndex ? "block" : "none",
     };

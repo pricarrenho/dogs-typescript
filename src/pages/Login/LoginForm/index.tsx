@@ -2,17 +2,17 @@ import React from "react";
 import { useContext } from "react";
 import { useForm } from "../../../Hooks/useForm";
 import { UserContext } from "../../../context/UserContext";
-import { Head } from "../../../Components/Helper/Head";
+import { Head } from "../../../Components/Head/Head";
 import { Input } from "../../../Components/Input";
 import { Button } from "../../../Components/Button";
-import { Error } from "../../../Components/Helper/Error";
+import { Error } from "../../../Components/Error";
 import { Link } from "react-router-dom";
 import stylesBTN from "../../../Components/Button/styles.module.css";
 import styles from "./styles.module.css";
 
 export const LoginForm = () => {
-  const username = useForm();
-  const password = useForm();
+  const username = useForm(false);
+  const password = useForm(false);
 
   const { userLogin, error, loading } = useContext(UserContext);
 
@@ -26,7 +26,7 @@ export const LoginForm = () => {
 
   return (
     <section className="animeLeft">
-      <Head title="Login" />
+      <Head title="Login" description="Faça seu login aqui" />
 
       <h1 className="title">Login</h1>
 

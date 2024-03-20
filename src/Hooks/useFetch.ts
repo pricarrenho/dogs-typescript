@@ -1,8 +1,7 @@
 import { useCallback, useState } from "react";
-import { DataProps } from "../pages/Photo/types";
 
 export const useFetch = () => {
-  const [data, setData] = useState<DataProps>();
+  const [data, setData] = useState();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes as RouteLib } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login/Login";
-import { ProtectedRoute } from "../Components/Helper/ProtectedRoute";
+import { ProtectedRoute } from "../Components/ProtectedRoute";
 import { User } from "../pages/User/User";
 import { Photo } from "../pages/Photo/Photo";
 import { UserProfile } from "../pages/User/UserProfile";

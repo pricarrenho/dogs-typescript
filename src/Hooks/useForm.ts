@@ -1,6 +1,13 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
-const types = {
+type Types = {
+  [key: string]: {
+    regex: RegExp;
+    message: string;
+  };
+};
+
+const types: Types = {
   email: {
     regex:
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -18,11 +25,11 @@ const types = {
   },
 };
 
-export const useForm = (type) => {
+export const useForm = (type: string | false) => {
   const [value, setValue] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
-  function validate(value) {
+  function validate(value: string) {
     if (type === false) return true;
     if (value.length === 0) {
       setError("Preencha um valor");
@@ -36,9 +43,9 @@ export const useForm = (type) => {
     }
   }
 
-  function onChange({ target }) {
-    if (error) validate(target.value);
-    setValue(target.value);
+  function onChange(event: ChangeEvent<HTMLInputElement>) {
+    if (error) validate(event.target.value);
+    setValue(event.target.value);
   }
 
   return {

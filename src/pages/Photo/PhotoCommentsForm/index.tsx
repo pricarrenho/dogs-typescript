@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Enviar } from "../../../Assets/enviar.svg";
 import { useFetch } from "../../../Hooks/useFetch";
-import { Error } from "../../../Components/Helper/Error";
+import { Error } from "../../../Components/Error";
 import { COMMENT_POST } from "../../../services/api";
 import { PhotoCommentsFormProps } from "../types";
 import styles from "./styles.module.css";
