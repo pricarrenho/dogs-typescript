@@ -5,11 +5,12 @@ import { useFetch } from "../../../Hooks/useFetch";
 import { Error } from "../../../Components/Error";
 import { Loading } from "../../../Components/Loading/Loading";
 import { STATS_GET } from "../../../services/api";
+import { StatsGraphs } from "../UserStatsGraphs/types";
 
 const UserStatsGraphs = lazy(() => import("../UserStatsGraphs"));
 
 export const UserStats = () => {
-  const { data, error, loading, request } = useFetch();
+  const { data, error, loading, request } = useFetch<StatsGraphs[]>();
 
   useEffect(() => {
     async function getData() {
@@ -30,7 +31,8 @@ export const UserStats = () => {
           title="Estatísticas"
           description="Veja as estatísticas da sua conta aqui"
         />
-        <UserStatsGraphs data={data} />
+
+        {data && <UserStatsGraphs data={data} />}
       </Suspense>
     );
   else return null;

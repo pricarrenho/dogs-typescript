@@ -7,8 +7,6 @@ const UserStatsGraphs = ({ data }: UserStatsGraphsProps) => {
   const [graph, setGraph] = useState<GraphType[]>([]);
   const [total, setTotal] = useState(0);
 
-  console.log(graph);
-
   useEffect(() => {
     const graphData = data.map((item) => {
       return {

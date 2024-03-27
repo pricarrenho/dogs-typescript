@@ -1,9 +1,7 @@
 import React from "react";
-import { Header } from "./Components/Header";
-import { Footer } from "./Components/Footer";
 import { useScrollToTop } from "./Hooks/useScrollToTop";
-import { Routes } from "./routes";
 import { UserStorage } from "./context/UserContext";
+import { Layout } from "./Components/Layout";
 import "./App.css";
 
 export function App() {
@@ -12,13 +10,7 @@ export function App() {
   return (
     <div className="App">
       <UserStorage>
-        <Header />
-
-        <main className="AppBody">
-          <Routes />
-        </main>
-
-        <Footer />
+        <Layout />
       </UserStorage>
     </div>
   );

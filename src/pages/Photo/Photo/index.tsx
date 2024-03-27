@@ -6,13 +6,14 @@ import { Error } from "../../../Components/Error";
 import { Loading } from "../../../Components/Loading/Loading";
 import { PhotoContent } from "../PhotoContent";
 import { PHOTO_GET } from "../../../services/api";
+import { DataProps } from "../../../types/types";
 
 export const Photo = () => {
   const { id } = useParams();
-  const { data, error, loading, request } = useFetch();
+  const { data, error, loading, request } = useFetch<DataProps>();
 
   useEffect(() => {
-    const { url, options } = PHOTO_GET(id);
+    const { url, options } = PHOTO_GET(Number(id));
     request(url, options);
   }, [request, id]);
 

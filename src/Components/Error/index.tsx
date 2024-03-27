@@ -1,7 +1,7 @@
 import React from "react";
 
 type ErrorProps = {
-  error: string | null;
+  error?: string;
 };
 
 export const Error = ({ error }: ErrorProps) => {

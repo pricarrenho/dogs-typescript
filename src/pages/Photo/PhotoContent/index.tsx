@@ -5,7 +5,7 @@ import { UserContext } from "../../../context/UserContext";
 import { Image } from "../../../Components/Image/Image";
 import { PhotoComments } from "../PhotoComments";
 import { PhotoDelete } from "../PhotoDelete";
-import { PhotoContentProps } from "../types";
+import { PhotoContentProps } from "./types";
 import styles from "./styles.module.css";
 
 export const PhotoContent = ({ data, single }: PhotoContentProps) => {

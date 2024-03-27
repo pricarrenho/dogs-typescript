@@ -1,15 +1,16 @@
 import { useCallback, useState } from "react";
+import { UseFetch } from "./types";
 
-export const useFetch = () => {
-  const [data, setData] = useState();
-  const [error, setError] = useState(null);
+export function useFetch<T>(): UseFetch<T> {
+  const [data, setData] = useState<T | undefined>();
+  const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
 
   const request = useCallback(async (url: string, options: any) => {
     let response;
     let json;
     try {
-      setError(null);
+      setError(undefined);
       setLoading(true);
 
       response = await fetch(url, options);
@@ -27,4 +28,4 @@ export const useFetch = () => {
   }, []);
 
   return { data, loading, error, request };
-};
+}

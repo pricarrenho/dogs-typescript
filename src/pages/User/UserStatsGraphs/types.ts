@@ -1,11 +1,11 @@
+export type StatsGraphs = {
+  acessos: string;
+  id: number;
+  title: string;
+};
+
 export type UserStatsGraphsProps = {
-  data: [
-    {
-      acessos: string;
-      id: number;
-      title: string;
-    }
-  ];
+  data: StatsGraphs[];
 };
 
 export type GraphType = {

@@ -12,7 +12,7 @@ export const UserProfile = () => {
         <>
           <Head title={user} description="Veja seu perfil aqui" />
           <h1 className="title">{user}</h1>
-          <Feed user={user} />
+          <Feed user={Number(user)} />
         </>
       )}
     </section>

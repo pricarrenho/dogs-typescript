@@ -1,11 +1,5 @@
 import { ChangeEvent, useState } from "react";
-
-type Types = {
-  [key: string]: {
-    regex: RegExp;
-    message: string;
-  };
-};
+import { Types } from "./types";
 
 const types: Types = {
   email: {

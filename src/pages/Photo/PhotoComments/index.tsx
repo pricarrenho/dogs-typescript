@@ -2,15 +2,14 @@ import React from "react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext } from "../../../context/UserContext";
 import { PhotoCommentsForm } from "../PhotoCommentsForm";
-import { PhotoCommentsProps } from "../types";
+import { Comments } from "../../../types/types";
+import { PhotoCommentss } from "./types";
 import styles from "./styles.module.css";
 
-export const PhotoComments = ({
-  single,
-  id,
-  commentArray,
-}: PhotoCommentsProps) => {
-  const [comments, setComments] = useState(commentArray);
+export const PhotoComments = ({ single, id, commentArray }: PhotoCommentss) => {
+  const [comments, setComments] = useState<Comments[] | undefined>(
+    commentArray
+  );
 
   const commentsSection = useRef<HTMLUListElement>(null);
 
@@ -38,7 +37,12 @@ export const PhotoComments = ({
       </ul>
 
       {login && (
-        <PhotoCommentsForm single={single} id={id} setComments={setComments} />
+        <PhotoCommentsForm
+          single={single}
+          id={id}
+          setComments={setComments}
+          comments={comments}
+        />
       )}
     </>
   );

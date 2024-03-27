@@ -1,21 +1,24 @@
-import { createContext, useCallback, useEffect, useState } from "react";
+import React, { createContext, useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from "../services/api";
+import { DataProps, GlobalContextType, GlobalProviderProps } from "./types";
 
-export const UserContext = createContext();
+export const UserContext = createContext<GlobalContextType>(
+  {} as GlobalContextType
+);
 
-export const UserStorage = ({ children }) => {
-  const [data, setData] = useState(null);
-  const [login, setLogin] = useState(null);
+export const UserStorage = ({ children }: GlobalProviderProps) => {
+  const [data, setData] = useState<DataProps>();
+  const [login, setLogin] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string>();
 
   const navigate = useNavigate();
 
   const userLogout = useCallback(
     async function () {
-      setData(null);
-      setError(null);
+      setData(undefined);
+      setError(undefined);
       setLoading(false);
       setLogin(false);
       window.localStorage.removeItem("token");
@@ -24,7 +27,7 @@ export const UserStorage = ({ children }) => {
     [navigate]
   );
 
-  async function getUser(token) {
+  async function getUser(token: string) {
     const { url, options } = USER_GET(token);
     const response = await fetch(url, options);
     const json = await response.json();
@@ -32,11 +35,11 @@ export const UserStorage = ({ children }) => {
     setLogin(true);
   }
 
-  async function userLogin(username, password) {
+  async function userLogin(username: string, password: string) {
     const alternativeErrorText = "Usuário ou senha incorreta. Tente novamente.";
 
     try {
-      setError(null);
+      setError(undefined);
       setLoading(true);
 
       const { url, options } = TOKEN_POST({ username, password });
@@ -66,7 +69,7 @@ export const UserStorage = ({ children }) => {
 
       if (token) {
         try {
-          setError(null);
+          setError(undefined);
           setLoading(true);
 
           const { url, options } = TOKEN_VALIDATE_POST(token);

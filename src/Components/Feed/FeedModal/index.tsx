@@ -4,14 +4,18 @@ import { Error } from "../../Error";
 import { Loading } from "../../Loading/Loading";
 import { PhotoContent } from "../../../pages/Photo/PhotoContent";
 import { PHOTO_GET } from "../../../services/api";
-import styles from "./styles.module.css";
 import { FeedModalProps } from "../types";
+import styles from "./styles.module.css";
+import { DataProps } from "../../../types/types";
 
 export const FeedModal = ({ photo, setModalPhoto }: FeedModalProps) => {
-  const { data, error, loading, request } = useFetch();
+  const { data, error, loading, request } = useFetch<DataProps>();
+
+  console.log(data);
 
   useEffect(() => {
     const { url, options } = PHOTO_GET(photo.id);
+
     request(url, options);
   }, [photo, request]);
 

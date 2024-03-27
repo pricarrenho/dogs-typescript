@@ -10,7 +10,7 @@ export const PhotoDelete = ({ id }: { id: number }) => {
     const confirm = window.confirm("Tem certeza que deseja deletar?");
     if (confirm) {
       const token = window.localStorage.getItem("token");
-      const { url, options } = PHOTO_DELETE(id, token);
+      const { url, options } = PHOTO_DELETE({ id, token });
       const { response } = await request(url, options);
       if (response?.ok) window.location.reload();
     }
