@@ -1,4 +1,4 @@
-import { DataProps, SingleType } from "../../../types/types";
+import { DataProps, SingleType } from "../../../types/globalTypes";
 
 export type PhotoContentProps = {
   data: DataProps;

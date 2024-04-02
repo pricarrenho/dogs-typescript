@@ -4,9 +4,9 @@ import { useFetch } from "../../../Hooks/useFetch";
 import { PHOTOS_GET } from "../../../services/api";
 import { Error } from "../../Error";
 import { Loading } from "../../Loading/Loading";
-import { FeedPhotosProps } from "../types";
+import { FeedPhotosProps } from "../FeedPhotos/types";
+import { Photo } from "../../../types/globalTypes";
 import styles from "./styles.module.css";
-import { Photo } from "../../../types/types";
 
 export const FeedPhotos = ({
   page,

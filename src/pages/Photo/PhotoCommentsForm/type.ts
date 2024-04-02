@@ -1,4 +1,4 @@
-import { Comments } from "../../../types/types";
+import { Comments } from "../../../types/globalTypes";
 
 export type PhotoCommentsFormProps = {
   id: number;

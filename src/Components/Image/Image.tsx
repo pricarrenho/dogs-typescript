@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ImageProps } from "./types";
-import styles from "./Image.module.css";
+import styles from "./styles.module.css";
 
 export const Image = ({ alt, src, single }: ImageProps) => {
   const [skeleton, setSkeleton] = useState(true);

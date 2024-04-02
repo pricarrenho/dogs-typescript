@@ -10,10 +10,10 @@ export type GlobalContextType = {
   error?: string;
   userLogin: (username: string, password: string) => Promise<void>;
   userLogout: () => Promise<void>;
-  data?: DataProps;
+  data?: Data;
 };
 
-export type DataProps = {
+export type Data = {
   id: number;
   username: string;
   nome: string;

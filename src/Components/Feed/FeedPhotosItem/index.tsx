@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "../../Image/Image";
-import { FeedPhotosItemProps } from "../types";
+import { FeedPhotosItemProps } from "../FeedPhotosItem/types";
 import styles from "./styles.module.css";
 
 export const FeedPhotosItem = ({

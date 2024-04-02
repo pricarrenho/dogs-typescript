@@ -7,12 +7,8 @@ import { Error } from "../../../Components/Error";
 import { useNavigate } from "react-router-dom";
 import { Head } from "../../../Components/Head/Head";
 import { PHOTO_POST } from "../../../services/api";
+import { ImageData } from "./types";
 import styles from "./styles.module.css";
-
-type ImageData = {
-  preview: string;
-  raw: File;
-};
 
 export const UserPhotoPost = () => {
   const nome = useForm(false);

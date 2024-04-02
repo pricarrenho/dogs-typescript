@@ -3,7 +3,7 @@ import { ReactComponent as Enviar } from "../../../Assets/enviar.svg";
 import { useFetch } from "../../../Hooks/useFetch";
 import { Error } from "../../../Components/Error";
 import { COMMENT_POST } from "../../../services/api";
-import { Comments } from "../../../types/types";
+import { Comments } from "../../../types/globalTypes";
 import { PhotoCommentsFormProps } from "./type";
 import styles from "./styles.module.css";
 

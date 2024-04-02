@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FeedModal } from "../FeedModal";
 import { FeedPhotos } from "../FeedPhotos";
+import { FeedProps } from "../Feed/types";
+import { Photo } from "../../../types/globalTypes";
 import PropTypes from "prop-types";
-import { FeedProps } from "../types";
-import { Photo } from "../../../types/types";
 
 export const Feed = ({ user }: FeedProps) => {
   const [modalPhoto, setModalPhoto] = useState<Photo | null>(null);

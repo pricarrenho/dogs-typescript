@@ -7,8 +7,8 @@ export const Input = ({
   type,
   name,
   value,
-  onChange,
   error,
+  onChange,
   onBlur,
 }: InputProps) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactComponent as Dogs } from "../../Assets/dogs-footer.svg";
 import { FaHeart } from "react-icons/fa";
-import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import styles from "./styles.module.css";
 
 export const Footer = () => {
   return (

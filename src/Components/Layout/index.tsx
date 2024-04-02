@@ -1,9 +1,8 @@
 import React from "react";
 import { Header } from "../Header";
-
 import { Footer } from "../Footer";
-import styles from "./styles.module.css";
 import { Routes } from "../../routes";
+import styles from "./styles.module.css";
 
 export function Layout() {
   return (

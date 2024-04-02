@@ -1,6 +1,6 @@
-import { Comments, SingleType } from "../../../types/types";
+import { Comments, SingleType } from "../../../types/globalTypes";
 
-export type PhotoCommentss = {
+export type PhotoCommentsProps = {
   single: SingleType;
   id: number;
   commentArray?: Comments[];

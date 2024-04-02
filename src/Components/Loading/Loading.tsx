@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import styles from "./Loading.module.css";
+import styles from "./styles.module.css";
 
 export const Loading = () => {
   const [step, setStep] = useState(0);

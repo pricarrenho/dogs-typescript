@@ -6,7 +6,7 @@ import { Error } from "../../../Components/Error";
 import { Loading } from "../../../Components/Loading/Loading";
 import { PhotoContent } from "../PhotoContent";
 import { PHOTO_GET } from "../../../services/api";
-import { DataProps } from "../../../types/types";
+import { DataProps } from "../../../types/globalTypes";
 
 export const Photo = () => {
   const { id } = useParams();

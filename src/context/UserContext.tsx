@@ -1,14 +1,14 @@
 import React, { createContext, useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from "../services/api";
-import { DataProps, GlobalContextType, GlobalProviderProps } from "./types";
+import { Data, GlobalContextType, GlobalProviderProps } from "./types";
 
 export const UserContext = createContext<GlobalContextType>(
   {} as GlobalContextType
 );
 
 export const UserStorage = ({ children }: GlobalProviderProps) => {
-  const [data, setData] = useState<DataProps>();
+  const [data, setData] = useState<Data>();
   const [login, setLogin] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>();

@@ -4,6 +4,11 @@ export type UseFetch<T> = {
   error?: string;
   request: (
     url: string,
-    options: any
+    options: RequestOptions
   ) => Promise<{ response?: Response; json?: T }>;
+};
+
+export type RequestOptions = {
+  cache?: string;
+  method?: string;
 };

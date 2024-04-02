@@ -2,11 +2,15 @@ import React from "react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext } from "../../../context/UserContext";
 import { PhotoCommentsForm } from "../PhotoCommentsForm";
-import { Comments } from "../../../types/types";
-import { PhotoCommentss } from "./types";
+import { Comments } from "../../../types/globalTypes";
+import { PhotoCommentsProps } from "./types";
 import styles from "./styles.module.css";
 
-export const PhotoComments = ({ single, id, commentArray }: PhotoCommentss) => {
+export const PhotoComments = ({
+  single,
+  id,
+  commentArray,
+}: PhotoCommentsProps) => {
   const [comments, setComments] = useState<Comments[] | undefined>(
     commentArray
   );
