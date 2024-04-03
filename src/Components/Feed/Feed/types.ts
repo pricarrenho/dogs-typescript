@@ -1,3 +1,3 @@
 export type FeedProps = {
-  user: number;
+  user: string;
 };

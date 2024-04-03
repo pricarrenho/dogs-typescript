@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Dogs" title="Dogs" src=".github/assets/dogs.jpg" />
+    <img alt="FaceDogs" title="FaceDogs" src=".github/assets/dogs.jpg" />
 </h1>
 
 <p align="center">
@@ -18,14 +18,14 @@ This project was developed using the following technologies:
 
 ## 🔥 Preview
 
-[![Deploy with Vercel](https://vercel.com/button)](https://dogs.pricarrenho.com.br)
+[![Deploy with Vercel](https://vercel.com/button)](https://facedogs.pricarrenho.com.br)
 
 ## 🚀 Getting started
 
 Clone the project and access the folder
 
 ```bash
-$ git clone https://github.com/pricarrenho/dogs && cd dogs
+$ git clone https://github.com/pricarrenho/facedogs && cd facedogs
 ```
 
 Follow the steps below
@@ -52,7 +52,7 @@ $ yarn start
 
 ## 💻 Project
 
-[Dogs](https://dogs.pricarrenho.com.br) was developed to validate knowledge in React.
+[FaceDogs](https://facedogs.pricarrenho.com.br) was developed to validate knowledge in React.
 
 ---
 

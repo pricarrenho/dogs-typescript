@@ -12,7 +12,7 @@ export type UserPostProps = {
 export type PhotosGetProps = {
   page: number;
   total: number;
-  user: number;
+  user: string;
 };
 
 export type PhotosPostProps = {
