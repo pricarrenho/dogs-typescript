@@ -8,6 +8,8 @@ import { Head } from "../../../Components/Head/Head";
 import { Input } from "../../../Components/Input";
 import { Button } from "../../../Components/Button";
 import { Error } from "../../../Components/Error";
+import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 export const LoginCreate = () => {
   const username = useForm(false);
@@ -30,8 +32,14 @@ export const LoginCreate = () => {
   }
 
   return (
-    <section className="animeLeft">
+    <section className={`${styles.container} animeLeft`}>
       <Head title="Crie sua Conta" description="Crie sua conta aqui" />
+
+      <div>
+        <Link className={styles.lostPasswordBTN} to="/login">
+          Voltar
+        </Link>
+      </div>
 
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>

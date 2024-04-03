@@ -1,7 +1,6 @@
 .login {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
   gap: 2rem;
 }
 
@@ -15,7 +14,6 @@
 .forms {
   max-width: 30rem;
   padding: 1rem;
-  margin-top: 10vh;
 }
 
 @media (max-width: 40rem) {

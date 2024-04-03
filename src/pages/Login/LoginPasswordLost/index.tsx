@@ -6,6 +6,8 @@ import { Error } from "../../../Components/Error";
 import { Head } from "../../../Components/Head/Head";
 import { useFetch } from "../../../Hooks/useFetch";
 import { PASSWORD_LOST } from "../../../services/api";
+import { Link } from "react-router-dom";
+import styles from "./styles.module.css";
 
 export const LoginPasswordLost = () => {
   const login = useForm(false);
@@ -24,11 +26,17 @@ export const LoginPasswordLost = () => {
   }
 
   return (
-    <section className="animeLeft">
+    <section className={`${styles.container} animeLeft`}>
       <Head
         title="Perdeu a senha"
         description="Perdeu sua senha? Recupere-a aqui"
       />
+
+      <div>
+        <Link className={styles.lostPasswordBTN} to="/login">
+          Voltar
+        </Link>
+      </div>
 
       <h1 className="title">Perdeu a senha?</h1>
 

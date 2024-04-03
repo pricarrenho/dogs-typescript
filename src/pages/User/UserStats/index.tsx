@@ -15,6 +15,7 @@ export const UserStats = () => {
   useEffect(() => {
     async function getData() {
       const token = window.localStorage.getItem("token");
+
       const { url, options } = STATS_GET(token);
 
       await request(url, options);

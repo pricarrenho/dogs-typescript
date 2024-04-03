@@ -17,7 +17,7 @@ export const Login = () => {
   if (login) return <Navigate to="/conta" />;
 
   return (
-    <section className={styles.login}>
+    <section className={`${styles.login} mainContainer`}>
       <div className={styles.forms}>
         <Routes>
           <Route path="/" element={<LoginForm />} />
